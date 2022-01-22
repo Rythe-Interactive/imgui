@@ -45,6 +45,10 @@ add_library(imgui STATIC
 	addons/FileBrowser/ImGuiFileBrowser.h
 	addons/FileBrowser/ImGuiFileBrowser.cpp
 	addons/FileBrowser/Dirent/dirent.h
+
+	addons/ImNodes/imnodes.h
+	addons/ImNodes/imnodes_internal.h
+	addons/ImNodes/imnodes.cpp
 )
 
 target_include_directories(imgui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
