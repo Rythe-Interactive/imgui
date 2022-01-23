@@ -28,6 +28,8 @@ add_library(imgui STATIC
 
 	backends/imgui_impl_glfw.h
 	backends/imgui_impl_opengl3.h
+	backends/imgui_impl_glfw.cpp
+	backends/imgui_impl_opengl3.cpp
 
 	addons/ImGuizmo/ImGuizmo.h
 	addons/ImGuizmo/ImCurveEdit.h
