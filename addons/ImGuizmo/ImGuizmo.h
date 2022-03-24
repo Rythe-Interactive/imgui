@@ -104,6 +104,8 @@ void EditTransform(const Camera& camera, matrix_t& matrix)
 #endif
 #pragma once
 
+#include "../../imgui.h"
+
 #ifdef USE_IMGUI_API
 #include "imconfig.h"
 #endif
@@ -114,6 +116,8 @@ void EditTransform(const Camera& camera, matrix_t& matrix)
 #ifndef IMGUIZMO_NAMESPACE
 #define IMGUIZMO_NAMESPACE ImGuizmo
 #endif
+
+#include <cstdint>
 
 namespace IMGUIZMO_NAMESPACE
 {
