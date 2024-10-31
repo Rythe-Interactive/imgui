@@ -21,10 +21,10 @@
 #ifndef NOMINMAX
     #define NOMINMAX
 #endif
-#include <Dirent/dirent.h>
+#include "Dirent/dirent.h"
 #include <windows.h>
 #else
-#include <dirent.h>
+//#include <dirent.h>
 #endif // defined (WIN32) || defined (_WIN32)
 
 namespace imgui_addons
@@ -362,7 +362,7 @@ namespace imgui_addons
 
                     // If dialog mode is SELECT then copy the selected dir name to the input text bar
                     if(dialog_mode == DialogMode::SELECT)
-                        strcpy(input_fn, filtered_dirs[i]->name.c_str());
+                        strcpy_s(input_fn, filtered_dirs[i]->name.c_str());
 
                     if(ImGui::IsMouseDoubleClicked(0))
                     {
@@ -389,7 +389,7 @@ namespace imgui_addons
                     is_dir = false;
 
                     // If dialog mode is OPEN/SAVE then copy the selected file name to the input text bar
-                    strcpy(input_fn, filtered_files[i]->name.c_str());
+                    strcpy_s(input_fn, filtered_files[i]->name.c_str());
 
                     if(ImGui::IsMouseDoubleClicked(0))
                     {
@@ -641,7 +641,7 @@ namespace imgui_addons
                         }
                         else
                         {
-                            strcpy(input_fn, element.get().c_str());
+                            strcpy_s(input_fn, element.get().c_str());
                             show_inputbar_combobox = false;
                         }
                     }
